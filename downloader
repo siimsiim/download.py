@@ -1,0 +1,24 @@
+
+from tqdm import tqdm
+from time import sleep
+import requests
+
+# url of the file, saved under variable url, asked from user first
+url = input("Please enter url of the content: ")
+  
+# request access to the file
+# response from the website saved under variable r 
+r = requests.get(url) # create HTTP response object 
+  
+
+# saving content as a zip file
+# open method will open the file and write as binary format 'wp'
+with open("SuvalineZipZip.zip",'wb') as f:           
+    
+# tqdm progress bar module, shows download progress    
+    for i in tqdm(range(25)):
+        print()
+        sleep(0.1)
+        pass 
+        f.write(r.content)        
+# In the end write the contents of the response
