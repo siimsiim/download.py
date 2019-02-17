@@ -17,7 +17,6 @@ with open("SuvalineZipZip.zip",'wb') as f:
     
 # tqdm progress bar module, shows download progress    
     for i in tqdm(range(25)):
-        print()
         sleep(0.1)
         pass 
         f.write(r.content)        
