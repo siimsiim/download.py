@@ -3,6 +3,10 @@ from tqdm import tqdm
 from time import sleep
 import requests
 
+parser = argparse.ArgumentParser(description='Limit download speed to 2000 bytes.')
+parser.add_argument('-l', '--limit2000', dest='limit', action='store_const', const=2000, help='limitation of download speed')
+args = parser.parse_args()
+
 # url of the file, saved under variable url, asked from user first
 url = input("Please enter url of the content: ")
   
